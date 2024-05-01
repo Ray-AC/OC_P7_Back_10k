@@ -3,7 +3,7 @@ name: Run pytest
 on:
   push:
     branches:
-      - master  # ou le nom de votre branche principale
+      - master
 
 jobs:
   test:
