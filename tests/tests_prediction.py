@@ -12,5 +12,3 @@ async def test_prediction_client():
     assert test_pred['oof_preds'] == 1.0
     test_pred_live = await tab_prediction_client_live(100246)
     assert test_pred_live['Pourcentage de chance de remboursement'] == 0.59
-'''    assert await tab_prediction_client(100002) == 1.0
-    assert await tab_prediction_client_live(100246) == 1.0'''
