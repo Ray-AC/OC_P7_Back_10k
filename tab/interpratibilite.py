@@ -3,7 +3,7 @@ from imports import *
 dataframe_for_lime = pd.read_csv("./data/dataframe_for_lime_10k_rows.csv")
 dataframe_for_dic_for_lime = pd.read_csv("./data/dataframe_for_dic_for_lime_10k_rows.csv")
 
-best_lgb = joblib.load('D:/Downloads/best_lightgbm_model.pkl')
+best_lgb = joblib.load('./data/best_lightgbm_model.pkl')
 
 indice_sk_id_curr = {}
 # Parcourir chaque ligne du DataFrame df_usable

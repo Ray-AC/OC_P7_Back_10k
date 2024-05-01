@@ -3,7 +3,7 @@ from imports import *
 predict_df = pd.read_csv("./data/predict_10k_rows.csv")
 final_dataframe = pd.read_csv("./data/final_dataframe_10k_rows.csv")
 
-best_lgb = joblib.load('D:/Downloads/best_lightgbm_model.pkl')
+best_lgb = joblib.load('./data/best_lightgbm_model.pkl')
 
 async def tab_prediction_client_live(client_id: int):
     # Vérifier si le client_id est présent dans predict_df['sk-id-curr']
