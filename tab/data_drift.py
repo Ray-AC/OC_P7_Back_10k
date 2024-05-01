@@ -1,6 +1,6 @@
 from imports import *
 
-with open("D:/Downloads/data_drift.png", "rb") as file:
+with open("./data/data_drift.png", "rb") as file:
     image_content = file.read()
     
 async def tab_data_drift():
