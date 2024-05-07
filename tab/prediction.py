@@ -1,8 +1,6 @@
 from imports import *
 
-predict_df = pd.read_csv("./data/predict_10k_rows.csv")
-
-async def tab_prediction_client(client_id: int):
+async def tab_prediction_client(predict_df, client_id: int):
     # Vérifier si le client_id est présent dans predict_df['sk-id-curr']
     if client_id not in predict_df['sk-id-curr'].values:
         raise HTTPException(status_code=404, detail="Client ID not found")

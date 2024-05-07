@@ -1,9 +1,6 @@
 from imports import *
 
-final_dataframe = pd.read_csv("./data/final_dataframe_10k_rows.csv")
-
-
-async def tab_summary_stats_plot(sk_id_to_display: int):
+async def tab_summary_stats_plot(final_dataframe, sk_id_to_display: int):
     # Sélectionner les colonnes spécifiées
     final_dataframe_subset = final_dataframe.loc[:, ['sk-id-curr', 'payment-rate', 'ext-source-3', 'ext-source-2', 'ext-source-1', 'days-birth', 'amt-annuity', 'days-employed']]
     # Vérifier si le sk_id_to_display est présent dans final_dataframe_subset['sk-id-curr']

@@ -1,11 +1,6 @@
 from imports import *
 
-predict_df = pd.read_csv("./data/predict_10k_rows.csv")
-final_dataframe = pd.read_csv("./data/final_dataframe_10k_rows.csv")
-
-best_lgb = joblib.load('./data/best_lightgbm_model.pkl')
-
-async def tab_prediction_client_live(client_id: int):
+async def tab_prediction_client_live(predict_df, final_dataframe, best_lgb, client_id: int):
     # Vérifier si le client_id est présent dans predict_df['sk-id-curr']
     if client_id not in predict_df['sk-id-curr'].values:
         raise HTTPException(status_code=404, detail="Client ID not found")
