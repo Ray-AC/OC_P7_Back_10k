@@ -19,9 +19,9 @@ async def root():
     return "Vérification d'enregistrement"
 
 @app.get("/get_unique_client_ids")
-async def get_unique_client_ids(predict_df):
+async def get_unique_client_ids():
     unique_client_ids = await tab_get_unique_client_ids(predict_df)
-    return unique_client_ids
+    return {"client_ids": unique_client_ids}
 
 @app.get("/prediction_client")
 async def prediction_client(client_id: int):
