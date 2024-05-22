@@ -40,8 +40,7 @@ async def summary_stats_plot(sk_id_to_display: int):
 
 @app.get("/data_drift")
 async def data_drift():
-    image_base64 = await tab_data_drift()
-    return image_base64
+    return FileResponse('./data/report.html')
 
 @app.get("/interpratibilite")
 async def interpratibilite(sk_id_curr_value: int):

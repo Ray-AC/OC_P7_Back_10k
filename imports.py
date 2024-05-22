@@ -14,4 +14,5 @@ import matplotlib.pyplot as plt
 from lightgbm import LGBMClassifier
 from sklearn.metrics import roc_auc_score
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
 from sklearn.model_selection import KFold, StratifiedKFold, train_test_split
