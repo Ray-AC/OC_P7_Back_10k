@@ -5,6 +5,7 @@ from tab.prediction import tab_prediction_client
 from tab.prediction_live import tab_prediction_client_live
 from tab.stats import tab_summary_stats_plot
 from tab.interpratibilite import tab_interpratibilite
+from tab.interpratibilite_globale import tab_interpratibilite_globale
 
 
 app = FastAPI() #check query parameters
@@ -44,4 +45,9 @@ async def data_drift():
 @app.get("/interpratibilite")
 async def interpratibilite(sk_id_curr_value: int):
     explanation_base64 = await tab_interpratibilite(sk_id_curr_value)
+    return explanation_base64
+
+@app.get("/interpratibilite_globale")
+async def interpratibilite_globale():
+    explanation_base64 = await tab_interpratibilite_globale()
     return explanation_base64
