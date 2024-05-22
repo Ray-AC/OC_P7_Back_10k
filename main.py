@@ -4,7 +4,6 @@ from tab.get_id import tab_get_unique_client_ids
 from tab.prediction import tab_prediction_client
 from tab.prediction_live import tab_prediction_client_live
 from tab.stats import tab_summary_stats_plot
-from tab.data_drift import tab_data_drift
 from tab.interpratibilite import tab_interpratibilite
 
 
